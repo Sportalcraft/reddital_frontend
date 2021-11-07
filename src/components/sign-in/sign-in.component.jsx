@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './sign-in.module.css';
+import './sign-in.styles.css';
 
 const Signin = () => (
-  <div className={styles.Signin}>
-    <h1 className={styles.title}>Register</ h1>
-    <input id="username" className={styles.textinput} placeholder="username" type="text"></input>
+  <div className= "Signin center form-block">
+    <h1 className="title lobster-font">Register</ h1>
+    <input id="username" className="input textinput" placeholder="username" type="text"></input>
     <br />
-    <input id="email" className={styles.textinput} placeholder="email" type="email"></input>
+    <input id="email" className="input textinput" placeholder="email" type="email"></input>
     <br />
-    <input id="password" className={styles.textinput} placeholder="password" type="password"></input>
+    <input id="password" className="input textinput" placeholder="password" type="password"></input>
     <br />
     <br />
-    <button id="register" className={styles.registerButon} type="submit">Register</button>
+    <button id="register" className="buton registerButon sil-font" type="submit">Register</button>
   </div>
 );
 

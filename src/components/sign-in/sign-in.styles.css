@@ -1,0 +1,20 @@
+.Signin { 
+    width: 500px;
+    height: 500px;
+}
+
+.textinput {  
+    width: 200px;
+    height: 10px;
+    font-size: 20px;   
+}
+
+.registerButon {
+    width: 100px;
+    font-size: 25px;
+}
+
+.title {
+    font-size: 72px;
+    color: aqua;
+}

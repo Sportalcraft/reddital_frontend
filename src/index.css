@@ -17,3 +17,68 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* ------------------------------------------------ Global CSSs ------------------------------------------------ */
+
+/* align on screen middle */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+}
+
+/* create a block to use in forms */
+.form-block{
+  background-color: #61cfcf;
+  border: 1px solid grey;
+
+  border-radius: 10px;
+
+  transition: transform 0.25s ease-out;
+}
+.form-block:hover {
+  transform: scale(1.02);
+}
+
+/* input design */
+.input {
+  -webkit-appearance: none;
+  
+  color: blue;
+
+  border :none;
+  outline :none;
+  padding: 15px;
+  margin: 15px;
+}
+
+/* button design */
+.buton {
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+
+  padding: 10px;
+  line-height: 30px;
+  margin-bottom: 30px;
+
+  color: rgb(228, 20, 117);
+  background-color: rgb(94, 6, 235);
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+
+
+/* ------------------------------------------------ Custom fonts ------------------------------------------------ */
+.lobster-font{
+  font-family: 'Lobster', cursive;
+}
+
+.sil-font {
+  font-family: 'Shadows Into Light', cursive;
+}
