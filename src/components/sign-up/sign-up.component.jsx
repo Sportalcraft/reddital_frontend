@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './sign-in.styles.css';
+import './sign-up.styles.css';
 
 import ValidatedInput from '../validated-input/validated-input.component';
 
-const Signin = () => {
+const Signup = () => {
   
   // use state for each of the fields
   const [username, setUsername] = useState(" ");
@@ -96,4 +96,4 @@ const Signin = () => {
 
 
 
-export default Signin;
+export default Signup;

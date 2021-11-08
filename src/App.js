@@ -2,7 +2,7 @@ import React  from 'react';
 
 import './App.css';
 
-import Signin from './components/sign-in/sign-in.component'
+import Signup from './components/sign-up/sign-up.component'
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className="App">
        <Routes>
-          <Route path='/signin' element={<Signin />} />
+          <Route path='/signup' element={<Signup />} />
        </Routes>
       </div>
     </Router>
