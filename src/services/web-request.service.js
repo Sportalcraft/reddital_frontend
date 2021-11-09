@@ -13,9 +13,10 @@ class webRequestService {
         return this.classInstance;
     }
     
-    post(uri, payload, callback = (res) =>{}) {
+    post(uri, payload, callback = (res) =>{}, callbackerr = (res) =>{}) {
         axios.post(this.#URL + uri, payload)
-            .then(callback);
+            .then(callback)
+            .catch(callbackerr);
     }
 };
 
