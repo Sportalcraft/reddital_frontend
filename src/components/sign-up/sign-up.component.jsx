@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './sign-up.styles.css';
 
+import authenticationService from '../../services/authentication.service';
+
 import ValidatedInput from '../validated-input/validated-input.component';
 
 const Signup = () => {
@@ -63,9 +65,9 @@ const Signup = () => {
     
     // check if there are errors, if not, continue with registrations
     if (validateUsername(username) === "" && validateEmail(email) === "" && validatePassword(password) === "") {
-      alert(`${username} ${email} ${password}`);
+      authenticationService.getInstance().signup(username, email, password);
     } else {
-      alert("Bad info");
+      alert("please provide valid information!");
     }
 
   }
