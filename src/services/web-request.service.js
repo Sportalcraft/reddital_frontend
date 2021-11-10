@@ -18,7 +18,7 @@ class webRequestService {
     }
 
     get(uri, payload) {
-        return post(uri, payload);
+        return this.post(uri, payload);
      }
 };
 
