@@ -45,8 +45,8 @@ const reducer = ( state={username:"",password:"" , userErr:" ",passwordErr:" "},
       case actions.LOGIN_CLICK:
         if(userErr === "" && passwordErr === ""){
           authenticationService.getInstance().login(username, password)
-            .then(response => alert(response))
-            .catch((err) => console.log(err.response.data));
+            .then(response => alert(`${response.data.id} ${response.data.username} ${response.data.email}`))
+            .catch((err) => alert(err.response.data));
         } else {
           alert('please provide valid credentials');
         }

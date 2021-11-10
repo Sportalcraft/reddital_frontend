@@ -18,7 +18,7 @@ class webRequestService {
     }
 
     get(uri, payload) {
-        return axios.post(this.#URL + uri, payload);
+        return axios.post(this.#URL + uri, payload); //yes, PSOT. not an error.
      }
 };
 
