@@ -1,0 +1,25 @@
+.login { 
+    width: 500px;
+    height: 460px;
+}
+
+.textinput {  
+    width: 350px;
+    height: 10px;
+    font-size: 20px;   
+}
+
+.loginButon {
+    width: 70px;
+    font-size: 25px;
+    margin-right: 40px;
+}
+
+.redirectSignup {
+    font-size: 20px;
+}
+
+.title {
+    font-size: 72px;
+    color: aqua;
+}

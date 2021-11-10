@@ -15,7 +15,11 @@ class authenticationService {
     }
     
     signup(username, email, password) {
-        webRequestService.getInstance().post(this.#userURI + "/signup", {username, email, password}, console.log, console.log);
+        return webRequestService.getInstance().post(this.#userURI + "/signup", {username, email, password})
+    }
+
+    login(username, password) {
+        return webRequestService.getInstance().get(this.#userURI + "/login", {username, password})
     }
 };
 

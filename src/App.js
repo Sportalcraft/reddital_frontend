@@ -2,19 +2,23 @@ import React  from 'react';
 
 import './App.css';
 
-import Signup from './components/sign-up/sign-up.component'
+import Register from './components/register';
+import Login from './components/login';
 
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes/*, Navigate*/} from 'react-router-dom';
+//import { Redirect } from 'react-router'
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-       <Routes>
-          <Route path='/signup' element={<Signup />} />
-       </Routes>
-      </div>
-    </Router>
+    <div className="App">
+      <Router>
+        {/*<Navigate exact from="/" to="/login" />*/}
+        <Routes>
+          <Route path='/signup' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
