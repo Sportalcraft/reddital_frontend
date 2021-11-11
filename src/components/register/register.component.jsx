@@ -8,19 +8,19 @@ export default function Register({onUserNameChange, onEmailChange, onPasswordCha
            
             <h1 className="title lobster-font">Register</ h1>
 
-            <input className="input textinput" onChange={onUserNameChange} placeholder="username" type="text"></input> 
+            <input id="username" className="input textinput" onChange={onUserNameChange} placeholder="username" type="text"></input> 
             <br />
             <label className="validator">{state.userErr}</label>
 
             <br />
 
-            <input className="input textinput" onChange={onEmailChange} placeholder="email" type="email"></input> 
+            <input id="email" className="input textinput" onChange={onEmailChange} placeholder="email" type="email"></input> 
             <br />
             <label className="validator">{state.emailErr}</label>
 
             <br />
 
-            <input className="input textinput" onChange={onPasswordChange} placeholder="password" type="password"></input> 
+            <input id="password" className="input textinput" onChange={onPasswordChange} placeholder="password" type="password"></input> 
             <br />
             <label className="validator">{state.passwordErr}</label>
 

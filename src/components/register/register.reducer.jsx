@@ -1,5 +1,4 @@
 import actions from './actionEnum';
-import authenticationService from '../../services/authentication.service';
 
 // ------------------------------------------- validators -------------------------------------------
 
@@ -50,7 +49,7 @@ const getPayload = () => ({
     USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
     EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: {newVal}}),
     PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: {newVal}}),
-    REGISTER_CLICK    : ()      =>  ({type: actions.REGISTER_CLICK  , payload:  {}}),
+    //REGISTER_CLICK    : ()      =>  ({type: actions.REGISTER_CLICK  , payload:  {}}),
   });
 
 
@@ -68,17 +67,6 @@ const reducer = ( state={username:"",email:"",password:"" , userErr:" ",emailErr
 
       case actions.PASSWORD_CHANGE:
         return {...state, password: payload.newVal, passwordErr:validatePassword(payload.newVal)};
-
-
-      case actions.REGISTER_CLICK:
-        if(userErr === "" && emailErr === "" && passwordErr === ""){
-          authenticationService.getInstance().signup(username, email, password)
-            .then(response => alert('success!'))
-            .catch((err) => alert(err.response.data));
-        } else {
-          alert('bad info!');
-        }
-        return state;
 
       default: 
         return state;
