@@ -11,13 +11,20 @@ export default () => {
 
   // ------------------------------------------- handlers -------------------------------------------
 
+  /**
+   * handle the register button click
+   * @param {*} state the cuurent state
+   */
   const registerHandler = (state) => {
 
     if(userErr === "" && emailErr === "" && passwordErr === ""){
+      //inputs are valid, contacting the server...
+
       authenticationService.getInstance().signup(username, email, password)
         .then(response => alert('success!'))
         .catch((err) => alert(err.response.data));
     } else {
+      //inputs are not valid
       alert('bad info!');
     }
   }

@@ -42,9 +42,12 @@ import actions from './actionEnum';
 
 
 
+// ------------------------------------------- reducer methods -------------------------------------------
 
 
-
+/**
+ * @returns the payload to send for the reducer function, depending on the type of action
+ */
 const getPayload = () => ({
     USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
     EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: {newVal}}),
@@ -53,19 +56,24 @@ const getPayload = () => ({
   });
 
 
-
+/**
+ * the register reducer
+ * @param {*} state the current state
+ * @param {*} param1 the action to perform, that was recived from getPayload.
+ * @returns 
+ */
 const reducer = ( state={username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "}, {type, payload} = {}) => {
     const {username, email, password, userErr, emailErr, passwordErr} = state;
 
     switch (type) {
 
-      case actions.USERNAME_CHANGE:
+      case actions.USERNAME_CHANGE: // username has changed
         return {...state, username: payload.newVal, userErr: validateUsername(payload.newVal)};
 
-      case actions.EMAIL_CHANGE:
+      case actions.EMAIL_CHANGE:  // email has changed
         return {...state, email: payload.newVal, emailErr:validateEmail(payload.newVal)};
 
-      case actions.PASSWORD_CHANGE:
+      case actions.PASSWORD_CHANGE:  // password has changed
         return {...state, password: payload.newVal, passwordErr:validatePassword(payload.newVal)};
 
       default: 

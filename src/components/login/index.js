@@ -13,16 +13,27 @@ export default () => {
   // ------------------------------------------- action handlers -------------------------------------------
  
 
+  /**
+   * handle pressing the login vakue
+   * @param {*} state the current state when clickin the buttom
+   */
   const handleLogin = (state) => {
     if(state.userErr === "" && state.passwordErr === ""){
+      //inputs are valid, contacting the server....
+
       authenticationService.getInstance().login(state.username, state.password)
         .then(response => alert(`${response.data.id} ${response.data.username} ${response.data.email}`))
         .catch((err) => alert(err.response.data));
+
     } else {
+      // the inputs atre not valid
       alert('please provide valid credentials');
     }
   }
 
+  /**
+   * handle clickin the redirect to register button
+   */
   const handleSignupRedirect = () => {
     //TODO
   }
