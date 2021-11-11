@@ -17,10 +17,10 @@ export default () => {
    */
   const registerHandler = (state) => {
 
-    if(userErr === "" && emailErr === "" && passwordErr === ""){
+    if(state.userErr === "" && state.emailErr === "" && state.passwordErr === ""){
       //inputs are valid, contacting the server...
 
-      authenticationService.getInstance().signup(username, email, password)
+      authenticationService.getInstance().signup(state.username, state.email, state.password)
         .then(response => alert('success!'))
         .catch((err) => alert(err.response.data));
     } else {
