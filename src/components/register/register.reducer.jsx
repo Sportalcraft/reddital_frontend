@@ -63,7 +63,6 @@ const getPayload = () => ({
  * @returns 
  */
 const reducer = ( state={username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "}, {type, payload} = {}) => {
-    const {username, email, password, userErr, emailErr, passwordErr} = state;
 
     switch (type) {
 
