@@ -34,7 +34,7 @@ class authenticationService {
      * @returns an HTML promise of the requesr
      */
     login(username, password) {
-        return webRequestService.getInstance().get(this.#userURI + "/login", {username, password})
+        return webRequestService.getInstance().post(this.#userURI + "/login", {username, password})
     }
 };
 
