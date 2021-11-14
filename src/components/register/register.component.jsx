@@ -1,7 +1,7 @@
 import React from 'react'
 import './register.styles.css'
 
-export default function Register({onUserNameChange, onEmailChange, onPasswordChange, onRegister, userErr, emailErr, passwordErr}) {
+export default ({onUserNameChange, onEmailChange, onPasswordChange, onRegister, userErr, emailErr, passwordErr}) => {
 
     return (
         <div className= "Signin center form-block">

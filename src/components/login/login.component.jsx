@@ -1,7 +1,7 @@
 import React from 'react'
 import './login.styles.css'
 
-export default function Register({onUserNameChange, onPasswordChange, onLogin, signup, userErr, passwordErr}) {
+export default ({onUserNameChange, onPasswordChange, onLogin, signup, userErr, passwordErr}) => {
 
     return (
         <div className= "login center form-block">
