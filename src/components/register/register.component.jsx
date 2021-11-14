@@ -1,7 +1,7 @@
 import React from 'react'
 import './register.styles.css'
 
-export default function Register({onUserNameChange, onEmailChange, onPasswordChange, onRegister, state}) {
+export default function Register({onUserNameChange, onEmailChange, onPasswordChange, onRegister, userErr, emailErr, passwordErr}) {
 
     return (
         <div className= "Signin center form-block">
@@ -10,19 +10,19 @@ export default function Register({onUserNameChange, onEmailChange, onPasswordCha
 
             <input id="username" className="input textinput" onChange={onUserNameChange} placeholder="username" type="text"></input> 
             <br />
-            <label className="validator">{state.userErr}</label>
+            <label className="validator">{userErr}</label>
 
             <br />
 
             <input id="email" className="input textinput" onChange={onEmailChange} placeholder="email" type="email"></input> 
             <br />
-            <label className="validator">{state.emailErr}</label>
+            <label className="validator">{emailErr}</label>
 
             <br />
 
             <input id="password" className="input textinput" onChange={onPasswordChange} placeholder="password" type="password"></input> 
             <br />
-            <label className="validator">{state.passwordErr}</label>
+            <label className="validator">{passwordErr}</label>
 
             <br />
             <br />

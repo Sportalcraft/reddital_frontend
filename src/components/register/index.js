@@ -33,7 +33,7 @@ export default () => {
  
   return (
   <Register
-    state = {state}
+    {...state}
 
     onUserNameChange  = {event       => dispatch(getPayload().USERNAME_CHANGE(event.target.value))}
     onEmailChange     = {event       => dispatch(getPayload().EMAIL_CHANGE(event.target.value))}

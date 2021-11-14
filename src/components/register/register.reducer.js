@@ -1,7 +1,7 @@
 import actions from './actionEnum';
 
 /** The inital state of the reducer, will return by callig reducer with no arguments */
-const initalState = {username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "};
+const initialState = {username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "};
 
 // ------------------------------------------- validators -------------------------------------------
 
@@ -55,7 +55,6 @@ const getPayload = () => ({
     USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
     EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: {newVal}}),
     PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: {newVal}}),
-    //REGISTER_CLICK    : ()      =>  ({type: actions.REGISTER_CLICK  , payload:  {}}),
   });
 
 
