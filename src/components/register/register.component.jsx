@@ -10,19 +10,19 @@ export default ({onUserNameChange, onEmailChange, onPasswordChange, onRegister, 
 
             <input id="username" className="input textinput" onChange={onUserNameChange} placeholder="username" type="text"></input> 
             <br />
-            <label className="validator">{userErr}</label>
+            <label id="username-validator" className="validator">{userErr}</label>
 
             <br />
 
             <input id="email" className="input textinput" onChange={onEmailChange} placeholder="email" type="email"></input> 
             <br />
-            <label className="validator">{emailErr}</label>
+            <label id="email-validator" className="validator">{emailErr}</label>
 
             <br />
 
             <input id="password" className="input textinput" onChange={onPasswordChange} placeholder="password" type="password"></input> 
             <br />
-            <label className="validator">{passwordErr}</label>
+            <label id="password-validator" className="validator">{passwordErr}</label>
 
             <br />
             <br />

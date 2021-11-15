@@ -10,13 +10,13 @@ export default ({onUserNameChange, onPasswordChange, onLogin, signup, userErr, p
 
             <input id="username" className="input textinput" onChange={onUserNameChange} placeholder="username" type="text"></input> 
             <br />
-            <label className="validator">{userErr}</label>
+            <label id="username-validator" className="validator">{userErr}</label>
 
             <br />
 
             <input id="password" className="input textinput" onChange={onPasswordChange} placeholder="password" type="password"></input> 
             <br />
-            <label className="validator">{passwordErr}</label>
+            <label id="password-validator" className="validator">{passwordErr}</label>
 
             <br />
             <br />
