@@ -10,7 +10,10 @@ const INITIAL_STATE = {};
  * @returns the payload to send for the reducer function, depending on the type of action
  */
 const getPayload = () => ({
-  });
+  SUBREDDIT_CHANGE  : newVal  =>  ({type: actions.SUBREDDIT_CHANGE  , payload: {newVal}}),
+  TITLE_CHANGE      : newVal  =>  ({type: actions.TITLE_CHANGE      , payload: {newVal}}),
+  POST_CHANGE       : newVal  =>  ({type: actions.POST_CHANGE       , payload: {newVal}}),
+});
 
 
 /**
