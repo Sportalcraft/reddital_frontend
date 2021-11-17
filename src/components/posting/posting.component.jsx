@@ -1,11 +1,14 @@
 import React from 'react'
 
-export default function Posting({onSubChanged, onPostChange, onPost}) {
+export default function Posting({onSubChanged, onPostChange, onTitleChange, onPost}) {
     return (
         <div className="posting center form-block">
             <h1 className="title lobster-font">Post</ h1>
 
             <input id="subreddital" className="input textinput" onChange={onSubChanged} placeholder="subReddital" type="text"></input> 
+            <br />
+
+            <input id="title" className="input textinput" onChange={onTitleChange} placeholder="title" type="text"></input> 
             <br />
 
             <input id="post-text-area" className="input textarea" onChange={onPostChange} placeholder="create new post now!" type="text"></input> 
