@@ -2,10 +2,12 @@ import React, { useReducer } from 'react';
 import Posting from './posting.component';
 import { reducer, getPayload } from './posting.reducer';
 
-export default () => {
+import postService from '../../services/post.service';
+import authenticationService from '../../services/authentication.service';
+
+export default (props) => {
 
   // ------------------------------------------- state -------------------------------------------
- 
   
   const [state, dispatch] = useReducer(reducer, reducer());
 
@@ -17,10 +19,11 @@ export default () => {
    * @param {*} state the current state when clickin the buttom
    */
   const handlePosting = (state) => {
-    if(state.subredit !== "" && state.title !== "" && state.post !== ""){
-      //inputs are valid, contacting the server....
-
-      //TODO
+    if(state.title !== "" && state.post !== ""){
+      //inputs are valid, contacting the server...
+      postService.getInstance().post(state.title, state.post, /*props.match.params.subreddital*/ "askTal", authenticationService.getInstance().getLoggedUserAuthKey())
+        .then(response => console.log(response.data))
+        .catch((err) => alert(err.response.data));
 
     } else {
       // the inputs atre not valid
@@ -34,7 +37,6 @@ export default () => {
   <Posting
      {...state}
 
-     onSubChange  = {event       => dispatch(getPayload().SUBREDDIT_CHANGE(event.target.value))}
      onTitleChange  = {event      => dispatch(getPayload().TITLE_CHANGE(event.target.value))}
      onPostChange  = {event       => dispatch(getPayload().POST_CHANGE(event.target.value))}
 

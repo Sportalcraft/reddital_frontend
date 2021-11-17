@@ -1,5 +1,13 @@
-.posting{
+.container {
+    height: 100vh;
 
+    display: flex; 
+    justify-content:center;
+    align-items: center;
+}
+
+.posting{
+    width: 1000px;
 }
 
 .title {
@@ -7,24 +15,23 @@
     color: aqua;
 }
 
-.textinput {  
-    width: 350px;
+.textinput2 {  
+    width:900px;
     height: 10px;
     font-size: 20px;   
 }
 
 .textarea {  
-    width: 350px;
-    height: 200px;
+    width: 900px;
+    height: 300px;
     font-size: 20px;   
 }
 
 .postButon {
-    display: flex; 
-    justify-content: flex-end;
+    
     
     width: 70px;
-    margin-right: 40px;
+    margin-left: 860px;
 
     font-size: 25px;
 }

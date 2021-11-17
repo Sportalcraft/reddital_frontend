@@ -1,19 +1,22 @@
 import React from 'react'
 
-export default function Posting({onSubChange, onPostChange, onTitleChange, onPost}) {
+import './posting.styles.css';
+
+export default function Posting({onPostChange, onTitleChange, onPost}) {
     return (
-        <div className="posting center form-block">
-            <h1 className="title lobster-font">Post</ h1>
+        <div className="container">
+            <div className="posting form-block">
+                <h1 className="title lobster-font">Post</ h1>
 
-            <input id="title" className="input textinput" onChange={onTitleChange} placeholder="title" type="text"></input> 
-            <br />
+                <input id="title" className="input textinput2" onChange={onTitleChange} placeholder="title" type="text"></input> 
+                <br />
 
-            <input id="post-text" className="input textarea" onChange={onPostChange} placeholder="create new post now!" type="text"></input> 
-            <br />
-            <br />
+                <textarea id="post-text" className="input textarea" onChange={onPostChange} placeholder="create new post now!" type="text"></textarea> 
+                <br />
+                <br />
 
-            <button id="post" className="postButon buton sil-font" onClick={onPost} type="submit">Post</button>
-            
+                <button id="post" className="postButon buton sil-font" onClick={onPost} type="submit">Post</button>       
+            </div>
         </div>
     )
 }

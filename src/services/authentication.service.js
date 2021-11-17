@@ -6,6 +6,7 @@ class authenticationService {
     #userURI = "/user";
 
 
+
     static classInstance = null; // the instance, as of the singletone design pattern
 
     /** get the only instance if this class, as of the singletone design pattern */
@@ -14,6 +15,13 @@ class authenticationService {
             authenticationService.classInstance = new authenticationService();
         }
         return this.classInstance;
+    }
+
+    /**
+     * @returns the current user's auth key
+     */
+    getLoggedUserAuthKey() {
+        return "2";
     }
     
     /**

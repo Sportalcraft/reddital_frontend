@@ -5,6 +5,7 @@ import Posting from './index';
 
 
 
+
 //test to see that all the elements are bing rendered
 describe('posting index', () => {
 

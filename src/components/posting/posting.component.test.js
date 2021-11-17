@@ -23,7 +23,8 @@ describe('posting component', () => {
       expect(posting.find("#title").exists()).toBe(true);
       expect(posting.find("#post").exists()).toBe(true);
 
-      expect(posting.find("input").length).toBe(2);
+      expect(posting.find("input").length).toBe(1);
+      expect(posting.find("textarea").length).toBe(1);
       expect(posting.find("button").length).toBe(1);
     });
         
