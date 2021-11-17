@@ -20,9 +20,10 @@ describe('posting component', () => {
       const posting = createPosting();
       
       expect(posting.find("#post-text-area").exists()).toBe(true);
+      expect(posting.find("#title").exists()).toBe(true);
       expect(posting.find("#post").exists()).toBe(true);
 
-      expect(posting.find("input").length).toBe(2);
+      expect(posting.find("input").length).toBe(3);
       expect(posting.find("button").length).toBe(1);
     });
         
