@@ -1,7 +1,7 @@
 import actions from './actionEnum';
 
 /** The inital state of the reducer, will return by callig reducer with no arguments */
-const INITIAL_STATE = {};
+const INITIAL_STATE = {subreddit:"", post:"", title:""};
 
 
 // ------------------------------------------- exported methods -------------------------------------------
@@ -24,6 +24,15 @@ const getPayload = () => ({
  */
 const reducer = ( state=INITIAL_STATE, {type, payload} = {}) => {
     switch (type) {
+
+      case actions.SUBREDDIT_CHANGE:  // subreddit has changed
+        return {...state, subreddit: payload.newVal};
+
+      case actions.TITLE_CHANGE:      // title has changed
+        return {...state, title: payload.newVal};
+
+      case actions.POST_CHANGE:       // post has changed
+        return {...state, post: payload.newVal};
 
 
       default: 

@@ -37,7 +37,7 @@ describe('posting reducer', () => {
         expect(reducer(undefined                                                                    , getPayload().POST_CHANGE(post)))  .toStrictEqual({subreddit:"", post:post, title:""});
         expect(reducer({subreddit:"", post:"", title:""}                                            , getPayload().POST_CHANGE(post)))  .toStrictEqual({subreddit:"", post:post, title:""});
         expect(reducer({subreddit:"r/marshmallow", post:"old", title:"what is your perfect food?"}  , getPayload().POST_CHANGE(post)))  .toStrictEqual({subreddit:"r/marshmallow", post:post, title:"what is your perfect food?"});
-        expect(reducer({subreddit:"", post:"", title:"old"}                                         , getPayload().POST_CHANGE("")))    .toStrictEqual({subreddit:"", post:"", title:""});
+        expect(reducer({subreddit:"", post:"", title:"old"}                                         , getPayload().POST_CHANGE("")))    .toStrictEqual({subreddit:"", post:"", title:"old"});
     });
 });
 
