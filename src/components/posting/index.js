@@ -31,10 +31,10 @@ export default () => {
   // ------------------------------------------- return statement -------------------------------------------
  
   return (
-  <Login
+  <Posting
      {...state}
 
-     onSubChanged  = {event       => dispatch(getPayload().SUBREDDIT_CHANGE(event.target.value))}
+     onSubChange  = {event       => dispatch(getPayload().SUBREDDIT_CHANGE(event.target.value))}
      onTitleChange  = {event      => dispatch(getPayload().TITLE_CHANGE(event.target.value))}
      onPostChange  = {event       => dispatch(getPayload().POST_CHANGE(event.target.value))}
 

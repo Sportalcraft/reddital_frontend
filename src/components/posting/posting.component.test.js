@@ -19,7 +19,7 @@ describe('posting component', () => {
     it('renders posting', () => {
       const posting = createPosting();
       
-      expect(posting.find("#post-text-area").exists()).toBe(true);
+      expect(posting.find("#post-text").exists()).toBe(true);
       expect(posting.find("#title").exists()).toBe(true);
       expect(posting.find("#post").exists()).toBe(true);
 
