@@ -1,0 +1,30 @@
+.posting{
+
+}
+
+.title {
+    font-size: 72px;
+    color: aqua;
+}
+
+.textinput {  
+    width: 350px;
+    height: 10px;
+    font-size: 20px;   
+}
+
+.textarea {  
+    width: 350px;
+    height: 200px;
+    font-size: 20px;   
+}
+
+.postButon {
+    display: flex; 
+    justify-content: flex-end;
+    
+    width: 70px;
+    margin-right: 40px;
+
+    font-size: 25px;
+}
