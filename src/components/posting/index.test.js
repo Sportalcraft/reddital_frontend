@@ -12,112 +12,34 @@ describe('posting index', () => {
     const createPostingIndex = () =>
         mount( <Posting/>);
 
-    // test subreddit changed
-    it('subreddit changed', () => {
-        let wrper     = createPostingIndex();
-        let posting   = wrper.find("Posting");
-        let sub_area  = posting.find('#subreddital');
-
-        expect(sub_area.length).toEqual(1);
-
-       
-       
-        let value = "r/bananasVs.cats";
-
-        // valid text
-        sub_area.simulate("change", { target: { value } });
-        wrper.update();
-        posting   = wrper.find("Posting");
-        expect(posting.props().subreddit).toBe(value);
-
-        //empty string 
-        value = ""
-        sub_area.simulate("change", { target: { value} });
-        wrper.update();
-        posting   = wrper.find("Posting");
-        expect(posting.props().subreddit).toBe(value);
-    });
-
-     // test subreddit changed
-     it('subreddit changed', () => {
-      let wrper     = createPostingIndex();
-      let posting   = wrper.find("Posting");
-      let sub_area  = posting.find('#subreddital');
-
-      expect(sub_area.length).toEqual(1);
-
-     
-     
-      let value = "r/bananasVs.cats";
-
-      // valid text
-      sub_area.simulate("change", { target: { value } });
-      wrper.update();
-      posting   = wrper.find("Posting");
-      expect(posting.props().subreddit).toBe(value);
-
-      //empty string 
-      value = ""
-      sub_area.simulate("change", { target: { value} });
-      wrper.update();
-      posting   = wrper.find("Posting");
-      expect(posting.props().subreddit).toBe(value);
-  });
-
- // test subreddit changed
-    it('subreddit changed', () => {
-        let wrper     = createPostingIndex();
-        let posting   = wrper.find("Posting");
-        let sub_area  = posting.find('#subreddital');
-
-        expect(sub_area.length).toEqual(1);
-
-       
-       
-        let value = "r/bananasVs.cats";
-
-        // valid text
-        sub_area.simulate("change", { target: { value } });
-        wrper.update();
-        posting   = wrper.find("Posting");
-        expect(posting.props().subreddit).toBe(value);
-
-        //empty string 
-        value = ""
-        sub_area.simulate("change", { target: { value} });
-        wrper.update();
-        posting   = wrper.find("Posting");
-        expect(posting.props().subreddit).toBe(value);
-    });
-
     // test title changed
-    it('title changed', () => {
-      let wrper     = createPostingIndex();
-      let posting   = wrper.find("Posting");
-      let textbox   = posting.find('#title');
+    it('subreddit changed', () => {
+        let wrper     = createPostingIndex();
+        let posting   = wrper.find("Posting");
+        let textbox   = posting.find('#title');
 
-      expect(textbox.length).toEqual(1);
+        expect(textbox.length).toEqual(1);
 
-     
-     
-      let value = "hello evryone!";
+       
+       
+        let value = "hello!";
 
-      // valid text
-      textbox.simulate("change", { target: { value } });
-      wrper.update();
-      posting   = wrper.find("Posting");
-      expect(posting.props().title).toBe(value);
+        // valid text
+        textbox.simulate("change", { target: { value } });
+        wrper.update();
+        posting   = wrper.find("Posting");
+        expect(posting.props().title).toBe(value);
 
-      //empty string 
-      value = ""
-      textbox.simulate("change", { target: { value} });
-      wrper.update();
-      posting   = wrper.find("Posting");
-      expect(posting.props().title).toBe(value);
-  });
+        //empty string 
+        value = ""
+        textbox.simulate("change", { target: { value} });
+        wrper.update();
+        posting   = wrper.find("Posting");
+        expect(posting.props().title).toBe(value);
+    });
 
-  // post title changed
-  it('post changed', () => {
+  // title changed
+  it('post text changed', () => {
     let wrper     = createPostingIndex();
     let posting   = wrper.find("Posting");
     let textbox   = posting.find('#post-text');

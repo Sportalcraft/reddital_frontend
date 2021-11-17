@@ -5,9 +5,6 @@ export default function Posting({onSubChange, onPostChange, onTitleChange, onPos
         <div className="posting center form-block">
             <h1 className="title lobster-font">Post</ h1>
 
-            <input id="subreddital" className="input textinput" onChange={onSubChange} placeholder="subReddital" type="text"></input> 
-            <br />
-
             <input id="title" className="input textinput" onChange={onTitleChange} placeholder="title" type="text"></input> 
             <br />
 
