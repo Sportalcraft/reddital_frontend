@@ -42,7 +42,7 @@ export default () => {
  
   return (
   <Login
-    state = {state}
+     {...state}
 
     onUserNameChange  = {event       => dispatch(getPayload().USERNAME_CHANGE(event.target.value))}
     onPasswordChange  = {event       => dispatch(getPayload().PASSWORD_CHANGE(event.target.value))}

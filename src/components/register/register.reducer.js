@@ -1,5 +1,8 @@
 import actions from './actionEnum';
 
+/** The inital state of the reducer, will return by callig reducer with no arguments */
+const initialState = {username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "};
+
 // ------------------------------------------- validators -------------------------------------------
 
   /**
@@ -52,7 +55,6 @@ const getPayload = () => ({
     USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
     EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: {newVal}}),
     PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: {newVal}}),
-    //REGISTER_CLICK    : ()      =>  ({type: actions.REGISTER_CLICK  , payload:  {}}),
   });
 
 
@@ -62,7 +64,7 @@ const getPayload = () => ({
  * @param {*} param1 the action to perform, that was recived from getPayload.
  * @returns 
  */
-const reducer = ( state={username:"",email:"",password:"" , userErr:" ",emailErr:" ",passwordErr:" "}, {type, payload} = {}) => {
+const reducer = ( state=initialState, {type, payload} = {}) => {
 
     switch (type) {
 
