@@ -48,8 +48,8 @@ describe('register getPayload', () => {
     const email = "tal@barzialy.yosi";
     const password = "12345678";
 
-    expect(getPayload().USERNAME_CHANGE(username)).toStrictEqual({type: actions.USERNAME_CHANGE , payload: {newVal:username}});
-    expect(getPayload().EMAIL_CHANGE(email))      .toStrictEqual({type: actions.EMAIL_CHANGE    , payload: {newVal:email}});
-    expect(getPayload().PASSWORD_CHANGE(password)).toStrictEqual({type: actions.PASSWORD_CHANGE , payload: {newVal:password}});
+    expect(getPayload().USERNAME_CHANGE(username)).toStrictEqual({type: actions.USERNAME_CHANGE , payload: username});
+    expect(getPayload().EMAIL_CHANGE(email))      .toStrictEqual({type: actions.EMAIL_CHANGE    , payload: email});
+    expect(getPayload().PASSWORD_CHANGE(password)).toStrictEqual({type: actions.PASSWORD_CHANGE , payload: password});
   });
 });

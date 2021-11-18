@@ -1,9 +1,12 @@
 import webRequestService from "./web-request.service";
 
+import { useEffect } from "react";
+
 class authenticationService {
      
     /** the URI for the user actions gateway */
     #userURI = "/user";
+
 
 
     static classInstance = null; // the instance, as of the singletone design pattern
@@ -14,6 +17,22 @@ class authenticationService {
             authenticationService.classInstance = new authenticationService();
         }
         return this.classInstance;
+    }
+
+    /**
+     * @returns the current user's auth key
+     */
+    getLoggedUserAuthKey() {
+        return localStorage.getItem("authKey");
+    }
+
+    /**
+     * @param {*} key the authentication key
+     */
+    setLoggedUserAuthKey(key) {
+        //useEffect(() => {
+            localStorage.setItem("authKey", key);
+        //});
     }
     
     /**

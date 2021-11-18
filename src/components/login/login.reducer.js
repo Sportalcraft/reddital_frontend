@@ -23,8 +23,8 @@ const initalState = {username:"",password:"" , userErr:" ",passwordErr:" "};
  * @returns the payload to send for the reducer function, depending on the type of action
  */
 const getPayload = () => ({
-    USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
-    PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: {newVal}}),
+    USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: newVal}),
+    PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: newVal}),
   });
 
 
@@ -38,10 +38,10 @@ const reducer = ( state=initalState, {type, payload} = {}) => {
     switch (type) {
 
       case actions.USERNAME_CHANGE: // user name has changed
-        return {...state, username: payload.newVal, userErr: validateNotempty(payload.newVal)};
+        return {...state, username: payload, userErr: validateNotempty(payload)};
 
       case actions.PASSWORD_CHANGE: // password has changed
-        return {...state, password: payload.newVal, passwordErr:validateNotempty(payload.newVal)};
+        return {...state, password: payload, passwordErr:validateNotempty(payload)};
 
       default: 
         return state;

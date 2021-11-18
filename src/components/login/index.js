@@ -22,7 +22,10 @@ export default () => {
       //inputs are valid, contacting the server....
 
       authenticationService.getInstance().login(state.username, state.password)
-        .then(response => alert(`${response.data.id} ${response.data.username} ${response.data.email}`))
+        .then(response => {
+          alert(`${response.data.id} ${response.data.username} ${response.data.email}`)
+          authenticationService.getInstance().setLoggedUserAuthKey(response.data.id);
+        })
         .catch((err) => alert(err.response.data));
 
     } else {
