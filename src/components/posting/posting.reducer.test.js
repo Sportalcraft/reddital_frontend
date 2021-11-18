@@ -38,7 +38,7 @@ describe('posting getPayload', () => {
     const title = "yosi, why did you eat a watermelon 5 years ago?";
     const post = "on 27.12.2016 at 16:04:09 I saw you eat a slice of watermelon, why?";
 
-    expect(getPayload().TITLE_CHANGE(title))    .toStrictEqual({type: actions.TITLE_CHANGE      , payload: {newVal:title}});
-    expect(getPayload().POST_CHANGE(post))      .toStrictEqual({type: actions.POST_CHANGE       , payload: {newVal:post}});
+    expect(getPayload().TITLE_CHANGE(title))    .toStrictEqual({type: actions.TITLE_CHANGE      , payload: title});
+    expect(getPayload().POST_CHANGE(post))      .toStrictEqual({type: actions.POST_CHANGE       , payload: post});
   });
 });

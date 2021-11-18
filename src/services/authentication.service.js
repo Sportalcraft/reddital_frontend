@@ -1,5 +1,7 @@
 import webRequestService from "./web-request.service";
 
+import { useEffect } from "react";
+
 class authenticationService {
      
     /** the URI for the user actions gateway */
@@ -21,7 +23,16 @@ class authenticationService {
      * @returns the current user's auth key
      */
     getLoggedUserAuthKey() {
-        return "2";
+        return localStorage.getItem("authKey");
+    }
+
+    /**
+     * @param {*} key the authentication key
+     */
+    setLoggedUserAuthKey(key) {
+        //useEffect(() => {
+            localStorage.setItem("authKey", key);
+        //});
     }
     
     /**

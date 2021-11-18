@@ -10,8 +10,8 @@ const INITIAL_STATE = {post:"", title:""};
  * @returns the payload to send for the reducer function, depending on the type of action
  */
 const getPayload = () => ({
-  TITLE_CHANGE      : newVal  =>  ({type: actions.TITLE_CHANGE      , payload: {newVal}}),
-  POST_CHANGE       : newVal  =>  ({type: actions.POST_CHANGE       , payload: {newVal}}),
+  TITLE_CHANGE      : newVal  =>  ({type: actions.TITLE_CHANGE      , payload: newVal}),
+  POST_CHANGE       : newVal  =>  ({type: actions.POST_CHANGE       , payload: newVal}),
 });
 
 
@@ -25,10 +25,10 @@ const reducer = ( state=INITIAL_STATE, {type, payload} = {}) => {
     switch (type) {
 
       case actions.TITLE_CHANGE:      // title has changed
-        return {...state, title: payload.newVal};
+        return {...state, title: payload};
 
       case actions.POST_CHANGE:       // post has changed
-        return {...state, post: payload.newVal};
+        return {...state, post: payload};
 
 
       default: 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 import Posting from './index';
 
@@ -11,7 +12,7 @@ describe('posting index', () => {
 
     // create a new component
     const createPostingIndex = () =>
-        mount( <Posting/>);
+        mount( <Router><Posting/></Router>);
 
     // test title changed
     it('subreddit changed', () => {

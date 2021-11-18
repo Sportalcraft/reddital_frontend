@@ -52,9 +52,9 @@ const initialState = {username:"",email:"",password:"" , userErr:" ",emailErr:" 
  * @returns the payload to send for the reducer function, depending on the type of action
  */
 const getPayload = () => ({
-    USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: {newVal}}),
-    EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: {newVal}}),
-    PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: {newVal}}),
+    USERNAME_CHANGE   : newVal  =>  ({type: actions.USERNAME_CHANGE , payload: newVal}),
+    EMAIL_CHANGE      : newVal  =>  ({type: actions.EMAIL_CHANGE , payload: newVal}),
+    PASSWORD_CHANGE   : newVal  =>  ({type: actions.PASSWORD_CHANGE , payload: newVal}),
   });
 
 
@@ -69,13 +69,13 @@ const reducer = ( state=initialState, {type, payload} = {}) => {
     switch (type) {
 
       case actions.USERNAME_CHANGE: // username has changed
-        return {...state, username: payload.newVal, userErr: validateUsername(payload.newVal)};
+        return {...state, username: payload, userErr: validateUsername(payload)};
 
       case actions.EMAIL_CHANGE:  // email has changed
-        return {...state, email: payload.newVal, emailErr:validateEmail(payload.newVal)};
+        return {...state, email: payload, emailErr:validateEmail(payload)};
 
       case actions.PASSWORD_CHANGE:  // password has changed
-        return {...state, password: payload.newVal, passwordErr:validatePassword(payload.newVal)};
+        return {...state, password: payload, passwordErr:validatePassword(payload)};
 
       default: 
         return state;
